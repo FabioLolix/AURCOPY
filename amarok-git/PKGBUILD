@@ -7,16 +7,17 @@
 
 pkgname=amarok-git
 pkgver=3.0.81.r22.g685fd3b
-pkgrel=1
+pkgrel=1.1
 pkgdesc="The powerful music player for KDE"
 arch=("i686" "x86_64")
 url="http://amarok.kde.org"
 license=("GPL2" "LGPL2.1" "FDL")
 depends=("threadweaver5" "qt5-webengine" "phonon-qt5" "qt5-declarative" #"qt5-script"
          "kcmutils5" "knewstuff5" "ktexteditor5" "kdnssd5" "kirigami2"
-         "mariadb" "libmariadbclient" "fftw" "liblastfm-qt5" "ffmpeg"  "taglib>=2.0" "libofa")
+         "mariadb" "libmariadbclient" "fftw" "liblastfm-qt5" "ffmpeg"  taglib "libofa")
 makedepends=("git" "extra-cmake-modules" "kdoctools5" "gdk-pixbuf2" "knotifyconfig5"
-             "libmtp" "libgpod" "loudmouth" "libmygpo-qt5" "qt5-tools")
+             "libmtp" "libgpod" "loudmouth" "libmygpo-qt5" "qt5-tools" gtest)
+checkdepends=(xorg-server-xvfb)
 optdepends=("libmtp: support for portable media devices"
             "ifuse: support for Apple iPod Touch and iPhone"
             "libgpod: support for Apple iPod audio devices"
@@ -42,7 +43,7 @@ build() {
 }
 
 check() {
-  ctest --test-dir build --output-on-failure
+  xvfb-run -s '-screen 0 1920x1080x24 -nolisten local' ctest --test-dir build --output-on-failure
 }
 
 package() {
