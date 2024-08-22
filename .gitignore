@@ -1,3 +1,5 @@
+.SRCINFO
+
 *.log
 *.rpm
 *.deb
