@@ -1,7 +1,7 @@
 # Maintainer: Gustavo Alvarez <sl1pkn07@gmail.com>
 
 pkgname=alacenc-git
-pkgver=0.3.0.2.g260574f
+pkgver=0.4.1.0.g9dcfb54
 pkgrel=1
 pkgdesc="Encode audio into the Apple Lossless Audio Codec (ALAC) format. (Git Version)"
 arch=('x86_64')

@@ -2,7 +2,7 @@
 
 _pkgname=gdcm
 pkgname=$_pkgname-git
-pkgver=3.0.24.r304.gf579a558d
+pkgver=3.0.24.r307.g581905347
 pkgrel=1
 pkgdesc='Open source implementation of the DICOM standard'
 arch=('i686' 'x86_64')

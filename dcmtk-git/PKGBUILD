@@ -2,7 +2,7 @@
 
 _pkgname=dcmtk
 pkgname=$_pkgname-git
-pkgver=3.6.8.r54.gc791af76e
+pkgver=3.6.8.r244.g1400272a3
 pkgrel=1
 pkgdesc='Collection of libraries and applications implementing large parts the DICOM standard'
 arch=('i686' 'x86_64')
