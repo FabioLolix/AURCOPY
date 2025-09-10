@@ -2,14 +2,15 @@
 
 _pkgname=gdcm
 pkgname=$_pkgname-git
-pkgver=3.0.24.r307.g581905347
+pkgver=3.2.0.r12.gbfe90029e
 pkgrel=1
 pkgdesc='Open source implementation of the DICOM standard'
 arch=('i686' 'x86_64')
 url='https://sourceforge.net/projects/gdcm'
 license=('BSD-3-Clause')
-depends=('expat' 'libxml2' 'openssl' 'openjpeg2')
-optdepends=('java-runtime>=22: Java wrapper' 'python: Python wrapper')
+depends=('expat' 'libxml2' 'openssl' 'openjpeg2' gcc-libs zlib)
+optdepends=('java-runtime>=22: Java wrapper'
+            'python: Python wrapper')
 makedepends=('git' 'cmake' 'swig' 'java-environment>=22' 'python' 'dcmtk-git')
 provides=("$_pkgname")
 conflicts=("$_pkgname")
